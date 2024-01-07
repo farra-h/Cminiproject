@@ -1,13 +1,18 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 
 int main() {
+            // setting NULL to avoid returning a time
+    srand(time(NULL)); // to generate a different sequence of numbers every time the program is run
 
     int guessingNum;
     int guessingchance;
     int theguess;
 
-    // Set the number that you want them to guess it
-    guessingNum = 7;
+    // Seting a random number from 0 to 9
+    guessingNum = rand() % 10;
+
 
     // Set how many you want them to try the guess
     guessingchance = 3;
@@ -28,7 +33,8 @@ int main() {
     }
 
     if( theguess != guessingNum ){
-            printf("You Lost");
+            printf("You Lost\n");
+            printf("The Number is %d", guessingNum);
         }
 
     return 0;
