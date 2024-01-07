@@ -17,6 +17,9 @@ int main() {
     // Set how many you want them to try the guess
     guessingchance = 3;
 
+    printf("Welcome to \"The Guessing Game\"\n");
+    printf("You have three attempts to try the Guessing!!\n");
+
     for( int i=1; i<=guessingchance; i++ ) {
 
         printf("Guess Number %d: ", i);
